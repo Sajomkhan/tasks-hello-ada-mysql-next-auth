@@ -1,11 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import TaskModal from "./TaskModal";
+import TaskModal from "../TaskModal";
 
-const Button = () => {
+const AddButton = () => {
   const [open, setOpen] = useState(false);
-  console.log(open);
 
   return (
     <div className="relative">
@@ -21,4 +20,4 @@ const Button = () => {
   );
 };
 
-export default Button;
+export default AddButton;

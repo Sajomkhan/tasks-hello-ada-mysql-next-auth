@@ -10,8 +10,9 @@ const TaskModal = ({ modalType, setOpen }: { modalType: TaskType, setOpen: any})
       </div>
       <form action="" className="flex flex-col gap-5">
         <input type="text" placeholder="Title" />
-        <input type="text" placeholder="Description" />
-        <button className="btn mt-2">Create</button>
+        <textarea name="desc" placeholder="Description"/>
+        {/* <input type="text" placeholder="Description" /> */}
+        <button className="btn mt-2">{modalType === 'create' ? "Create" : "Update"}</button>
       </form>
     </div>
   );

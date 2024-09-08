@@ -25,10 +25,7 @@ body {
     @apply w-fit py-1 px-3 rounded-md bg-teal-500 text-white hover:bg-teal-600 transition-all ease-linear duration-150;
   }
 
-  input{
-    @apply bg-slate-200 outline-none p-2
+  input, textarea{
+    @apply bg-slate-200 outline-none rounded-md p-2
   }
-  /* input:focus{
-    @apply outline-none
-  } */
 }
