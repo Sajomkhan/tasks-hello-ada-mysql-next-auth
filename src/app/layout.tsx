@@ -1,8 +1,10 @@
-
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "./components/Navbar";
+import { getSession } from "@/lib/action";
+import Login from "./components/Login";
+import { redirect } from "next/navigation";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -20,17 +22,17 @@ export const metadata: Metadata = {
   description: "A simple web application for managing tasks.",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  
   return (
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <div><Navbar /></div>
         {children}
       </body>
     </html>

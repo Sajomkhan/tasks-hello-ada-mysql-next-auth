@@ -3,9 +3,10 @@
 import { useState } from "react";
 import TaskModal from "../TaskModal";
 import { Pencil } from "lucide-react";
+import { TaskType } from "@/lib/data";
 
-const UpdateButton = () => {
-  const [open, setOpen] = useState(false);
+const UpdateButton = ({task}:{task:TaskType}) => {
+  const [open, setOpen] = useState(false); 
 
   return (
     <div className="relative">
@@ -15,7 +16,7 @@ const UpdateButton = () => {
       </div>
       {open && (
         <div className="absolute z-20 top-7 -right-6">
-          <TaskModal modalType="update" setOpen={setOpen} />
+          <TaskModal modalType="update" setOpen={setOpen} task={task}/>
         </div>
       )}
     </div>
