@@ -1,6 +1,7 @@
 import { login } from "@/lib/action";
 
-const LoginPage = async () => {
+const LoginPage = () => {
+
   return (
     <div className="w-full h-screen flex justify-center items-center">
       <div className="w-80 flex flex-col gap-10 bg-white px-6 py-14 rounded-lg">
